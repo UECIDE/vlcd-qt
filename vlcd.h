@@ -17,7 +17,7 @@ protected:
 
 public:
     explicit VLCD(QWidget *parent = nullptr);
-    ~VLCD();
+    ~VLCD() override;
 
 
 private slots:
