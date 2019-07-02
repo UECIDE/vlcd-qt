@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>chardevice.png</file>
+
+    </qresource>
+</RCC>
