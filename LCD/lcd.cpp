@@ -7,6 +7,7 @@ LCD::LCD(QWidget *parent) :
     setColor(QColor(0, 255, 0.0), QColor(0, 0, 0));
     setShadow(true);
     setSmallPixels(true);
+    memset(_data, 0, 256*64/8);
 }
 
 void LCD::drawPixel(QImage &image, int x, int y, bool state) {
