@@ -63,13 +63,9 @@ void HID::run() {
 
         uint8_t data[1024];
         int res = hid_read_timeout(_connectedDevice, data, 1024, 500);
-        if (res <= 0) {
-            hid_close(_connectedDevice);
-            _connectedDevice = nullptr;
-            qDebug() << "Error communicating. Dying.";
-            continue;
+        if (res > 0) {
+            emit packetReceived(data, res);
         }
-        emit packetReceived(data, res);
     }
 }
 
